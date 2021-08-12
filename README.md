@@ -4,11 +4,18 @@
 The "Too Much Information" mod, or the "Player Stats" API, is mod which provides users and modders reliable in-game immediate access to a players' character statistics, such as health, shield, armor and even hitbox count.
 <br><br>
 
-T.M.I. achieves this by providing multiple generically interfaced methods for other mods to use and a (currently non-<abbr title="Multi-User Targeting">M.U.T.</abbr> compatible) console command "COGetPlayersStat" for in-game users.<br> The methods provided allow a mod to query for a statistic based on its specific type, or--otherwise--query for a statistic with any type which returns the statistic as an object.
+T.M.I. achieves this by providing multiple generically interfaced methods for other mods to use and a (currently non-<abbr title="Multi-User Targeting">M.U.T.</abbr> compatible) console command `COGetPlayersStat` for in-game server owners/admins.<br>
+The methods provided allow a mod to query for a statistic based on its specific type, or--otherwise--query for a statistic with any type which returns the statistic as an object.
 <br><br>
 The mod is not intended to, but may, be used outside of defining new console commands, the mod was specifically created so that it is possible to use a characters' statistic as a console command argument - broadening the capabilities of the console command. While it *is* possible to use the mod outside of a new console command context, it is *very heartedly recommended to not do so* and instead reference whatever statistic needed directly as the mod is--naturally--considerably slower than a direct reference.
 <br><br>
 It is hoped that when this mod is completed it will be able to provide both read **and** write capabilities instead of just read, further broadening the capabilities of the console command.
+
+## Usage
+The system uses a generic interface allowing retrieval of any data from just a single method called `GetVariableFromString()`, requiring only the name of the variable, the body to target and an object of the return type. To help with finding what the type of a specific stat is (dynamically), a method exists which allows you to retrieve the type of any of the fetchable data; `GetVariableTypeFromString()`, requiring only the name of the variable and the body to target.
+
+As an alternative to `GetVariableFromString()`, you can use `GetVariableObjectFromString()` with just the variables' name, body and optionally the type if it's already known and it will return the stat in object form.
+**It is, however, recommended to define the type if possible as the runtime will spend much less time searching for the object.**
 
 ## due to an issue with uploading files directly into the repo via the github website, the files have been temporarily placed into a .zip file.
 
