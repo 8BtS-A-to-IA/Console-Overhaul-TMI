@@ -3,7 +3,8 @@
 ## About
 The "Too Much Information" mod, or the "Player Stats" API, is mod which provides users and modders reliable in-game immediate access to a players' character statistics, such as health, shield, armor and even hitbox count.
 <br><br>
-T.M.I. achieves this by providing multiple generically interfaced methods for other mods to use and a (non-M.U.T. compatible) console command "COGetPlayersStat" for in-game users.<br> The methods provided allow a mod to query for a statistic based on its specific type, or--otherwise--query for a statistic with any type which returns the statistic as an object.
+
+T.M.I. achieves this by providing multiple generically interfaced methods for other mods to use and a (currently non-<abbr title="Multi-User Targeting">M.U.T.</abbr> compatible) console command "COGetPlayersStat" for in-game users.<br> The methods provided allow a mod to query for a statistic based on its specific type, or--otherwise--query for a statistic with any type which returns the statistic as an object.
 <br><br>
 The mod is not intended to, but may, be used outside of defining new console commands, the mod was specifically created so that it is possible to use a characters' statistic as a console command argument - broadening the capabilities of the console command. While it *is* possible to use the mod outside of a new console command context, it is *very heartedly recommended to not do so* and instead reference whatever statistic needed directly as the mod is--naturally--considerably slower than a direct reference.
 <br><br>
@@ -16,7 +17,7 @@ It is hoped that when this mod is completed it will be able to provide both read
 After cloning the repository and ensuring you have any version of [VS 2017/2019](https://visualstudio.microsoft.com/) installed, you should be able to simply open the `.snl` file to open the project in VS.
 <br><br>
 Before posting a merge request, please ensure you've:
-- Adequately checked for bugs
+- Adequately checked for 'top level' bugs
 - Provided enough commenting/sudo-code for other contributers to quickly understand the process (if necessary)
 
 For the sake of documenting bugfixes, when posting a merge request, please ensure you detail any changes by:
@@ -24,9 +25,10 @@ For the sake of documenting bugfixes, when posting a merge request, please ensur
 - How the changes where made (in the 'extended description')
 
 ### How do I compile and run this?
-There are no special steps to building and compiling the code, simply press 'run' in VS.<br>
+There are no special steps to building and compiling the code, simply press 'run' in <abbr title="Visual Studio">VS</abbr>.<br>
 If you do not have the [export helper (todo)]() installed; simply press 'Ok' if an error appears saying "A project with an Output Type of Class Library cannot be started directly". Visual Studio will have the `.dll` file you need generated in `bin>Debug` for VS 2017 or `bin>Debug>netstandard2.0` for VS 2019, simply copy the `.dll` file into the BepInEx `plugins` folder and start RoR2.<br>
-If you have the exporter helper tool setup correctly; after pressing 'run' in VS, simply start RoR2.
+If you have the exporter helper tool setup correctly; after pressing 'run' in VS, simply start <abbr title="Risk of Rain 2">RoR2</abbr>.
+
 ### How can I help without any programming 'know-how'?
 Simply install the mod/modpack from [the modpacks main page](https://github.com/8BtS-A-to-IA/Console-Overhaul) and play. If you encounter any issues make sure to log it and provide as much relevant detail as possible in the relevant mods' `issue` page--or the main page if you don't know which mod is the problem--after checking if the same issue has not already been encountered, you can use the [formatting guide (todo)]() to help with this.<br>
 Don't worry about if you predict the wrong mod as the cause, it's more important to just have the report out there.
