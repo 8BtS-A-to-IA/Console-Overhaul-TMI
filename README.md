@@ -17,8 +17,6 @@ The system uses a generic interface allowing retrieval of any data from just a s
 As an alternative to `GetVariableFromString()`, you can use `GetVariableObjectFromString()` with just the variables' name, body and optionally the type if it's already known and it will return the stat in object form.
 **It is, however, recommended to define the type if possible as the runtime will spend much less time searching for the object.**
 
-## due to an issue with uploading files directly into the repo via the github website, the files have been temporarily placed into a .zip file.
-
 ## development
 ### How can I develop for this project?
 After cloning the repository and ensuring you have any version of [VS 2017/2019](https://visualstudio.microsoft.com/) installed, you should be able to simply open the `.snl` file to open the project in VS.
